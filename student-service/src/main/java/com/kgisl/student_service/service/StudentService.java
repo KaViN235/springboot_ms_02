@@ -28,7 +28,7 @@ public class StudentService {
 
     // CRUD opertion
     public ResponseEntity<List<Student>> getAllStudent() {
-        return new ResponseEntity<>(studentRepository.findAll(), HttpStatus.FOUND);
+        return new ResponseEntity<>(studentRepository.findAll(), HttpStatus.OK);
     }
 
     public Student getStudentById(Long studentId) {

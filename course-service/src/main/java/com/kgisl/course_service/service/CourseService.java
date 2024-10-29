@@ -28,7 +28,7 @@ public class CourseService {
         Optional<Course> existingCourse = courseRepository.findByName(course.getName());
 
         if (existingCourse.isPresent()) {
-            return new ResponseEntity<>("Course already exists", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Course already exists", HttpStatus.ALREADY_REPORTED);
         } else {
             courseRepository.save(course);
             return new ResponseEntity<>("Created", HttpStatus.CREATED);
